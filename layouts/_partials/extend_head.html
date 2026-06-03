@@ -4,5 +4,9 @@
 
 <link rel="stylesheet" type="text/css" href="{{ "/hugo-cite.css" | relURL }}" />
 
+{{ if or .Params.math .Site.Params.math }}
+{{ partial "math.html" . }}
+{{ end }}
+
 {{- /* Head custom content area end */ -}}
 
