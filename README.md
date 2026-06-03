@@ -27,13 +27,15 @@ This is a fork of the hugo PaperMod theme from [adityatelange/hugo-PaperMod](htt
 
 4. Adjusted light theme color values in `assets/css/core/theme-vars.css`.
 
-5. Installed the [hugo-cite](https://github.com/3ffe/hugo-cite) theme for managing bibliographies. Added
+5. Homepage title section takes too much space. Reduced `min-height` of `.first-entry` to `150px` in `assets/css/common/post-entry.css`.
+
+6. Installed the [hugo-cite](https://github.com/3ffe/hugo-cite) theme for managing bibliographies. Added
     ```html
     <link rel="stylesheet" type="text/css" href="{{ "/hugo-cite.css" | relURL }}" />
     ```
     in `themes/papermod/layouts/_partials/extend_head.html`.
 
-6. Enable LaTeX Math rendering. Added `layouts/_partials/math.html`. Added code block
+7. Enable LaTeX Math rendering. Added `layouts/_partials/math.html`. Added code block
     ```go
     {{ if or .Params.math .Site.Params.math }}
     {{ partial "math.html" . }}
